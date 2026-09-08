@@ -722,6 +722,8 @@ var _searchViewsJs = require("./views/SearchViews.js");
 var _searchViewsJsDefault = parcelHelpers.interopDefault(_searchViewsJs);
 var _resultsViewJs = require("./views/ResultsView.js");
 var _resultsViewJsDefault = parcelHelpers.interopDefault(_resultsViewJs);
+var _paginationViewsJs = require("./views/paginationViews.js");
+var _paginationViewsJsDefault = parcelHelpers.interopDefault(_paginationViewsJs);
 // https://forkify-api.herokuapp.com/v2
 ///////////////////////////////////////
 async function controlRecipes() {
@@ -739,32 +741,42 @@ async function controlRecipes() {
 function init() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipes);
     (0, _searchViewsJsDefault.default).addHandlerSearch(controlSearchResults);
+    (0, _paginationViewsJsDefault.default).addHandlerSearch(controlPagination);
 }
 init();
 async function controlSearchResults() {
     try {
-        (0, _resultsViewJsDefault.default).renderSpinner();
         const query = (0, _searchViewsJsDefault.default).getQuery();
+        if (!query) return;
+        (0, _resultsViewJsDefault.default).renderSpinner();
         await _modelJs.loadSearchResults(query);
-        (0, _resultsViewJsDefault.default).render(_modelJs.state.search.results);
+        (0, _resultsViewJsDefault.default).render(_modelJs.getSearchResultPage());
+        (0, _paginationViewsJsDefault.default).render(_modelJs.state.search);
     } catch (err) {
         console.log(err);
     }
 }
+async function controlPagination(goToPage) {
+    (0, _resultsViewJsDefault.default).render(_modelJs.getSearchResultPage(goToPage));
+    (0, _paginationViewsJsDefault.default).render(_modelJs.state.search);
+}
 
-},{"./model.js":"3QBkH","./views/RecipeView.js":"dfIpa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./views/SearchViews.js":"02c4V","./views/ResultsView.js":"CYzq3"}],"3QBkH":[function(require,module,exports,__globalThis) {
+},{"./model.js":"3QBkH","./views/RecipeView.js":"dfIpa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./views/SearchViews.js":"02c4V","./views/ResultsView.js":"CYzq3","./views/paginationViews.js":"eZ9OJ"}],"3QBkH":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
+parcelHelpers.export(exports, "getSearchResultPage", ()=>getSearchResultPage);
 var _configJs = require("./config.js");
 var _helpersJs = require("./helpers.js"); // importa la función getJSON desde helpers.js
 const state = {
     recipe: {},
     search: {
         query: '',
-        results: []
+        results: [],
+        page: 1,
+        resultsPerPage: (0, _configJs.RES_PER_PAGE)
     }
 };
 const loadRecipe = async function(id) {
@@ -792,6 +804,8 @@ const loadSearchResults = async function(query) {
     try {
         const data = await (0, _helpersJs.getJSON)(`${(0, _configJs.API_URL)}?search=${query}`);
         state.search.query = query;
+        state.search.page = 1; // Se lo agregue porque si una busqueda tiene 10 páginas y cambias de página
+        // y buscas, page se queda con el valor de la búsqueda anterior lo cual arroja no recipes found for your query
         state.search.results = data.data.recipes.map((rec)=>{
             return {
                 id: rec.id,
@@ -804,6 +818,14 @@ const loadSearchResults = async function(query) {
         console.error(`${err} \u{1F4A5}\u{1F4A5}\u{1F4A5}\u{1F4A5}`);
         throw err;
     }
+};
+const getSearchResultPage = function(page = state.search.page) {
+    page = Number(page); // Sebe de convertir a número porque state.search.page = page; lo guarda como STRING
+    //lo cual al "sumar" la otra pagina lo concatena "21" en lugar de 2 + 1 
+    state.search.page = page;
+    const start = (page - 1) * state.search.resultsPerPage;
+    const end = page * state.search.resultsPerPage;
+    return state.search.results.slice(start, end);
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./config.js":"2hPh4","./helpers.js":"7nL9P"}],"jnFvT":[function(require,module,exports,__globalThis) {
@@ -841,8 +863,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
 parcelHelpers.export(exports, "TIMEOUT_SEC", ()=>TIMEOUT_SEC);
+parcelHelpers.export(exports, "RES_PER_PAGE", ()=>RES_PER_PAGE);
 const API_URL = 'https://forkify-api.herokuapp.com/api/v2/recipes/';
 const TIMEOUT_SEC = 5;
+const RES_PER_PAGE = 10;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7nL9P":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -1489,6 +1513,70 @@ class ResultsView extends (0, _viewsDefault.default) {
 }
 exports.default = new ResultsView();
 
-},{"./Views":"agRZU","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","b799160e8a92a7be":"aob6l"}]},["5DuvQ","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
+},{"./Views":"agRZU","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","b799160e8a92a7be":"aob6l"}],"eZ9OJ":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _views = require("./Views");
+var _viewsDefault = parcelHelpers.interopDefault(_views);
+const icons = new URL(require("839df59dd0ab389f")).href;
+class PaginationView extends (0, _viewsDefault.default) {
+    _parentElement = document.querySelector('.pagination');
+    addHandlerSearch(handler) {
+        this._parentElement.addEventListener('click', function(e) {
+            const btn = e.target.closest('.btn--inline');
+            if (!btn) return;
+            const goToPage = btn.dataset.goto;
+            handler(goToPage);
+        });
+    }
+    _generateMarkup() {
+        const curPage = this._data.page;
+        const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
+        if (curPage === 1 && numPages > 1) return `
+            <button class="btn--inline pagination__btn--next" data-goto="${curPage + 1}">
+                <span>Page ${curPage + 1}</span>
+                <svg class="search__icon">
+                <use href="${icons}#icon-arrow-right"></use>
+                </svg>
+            </button>
+            `;
+        if (curPage === numPages && numPages > 1) return `
+            <button class="btn--inline pagination__btn--prev" data-goto="${curPage - 1}">
+                <svg class="search__icon">
+                <use href="${icons}#icon-arrow-left"></use>
+                </svg>
+                <span>Page ${curPage - 1}</span>
+            </button>
+            `;
+        if (curPage > 1 && curPage < numPages) return `
+            <button
+            class="btn--inline pagination__btn--prev"
+            data-goto="${curPage - 1}"
+            >
+            <svg class="search__icon">
+                <use href="${icons}#icon-arrow-left"></use>
+            </svg>
+
+            <span>Page ${curPage - 1}</span>
+            </button>
+
+            <button
+            class="btn--inline pagination__btn--next"
+            data-goto="${curPage + 1}"
+            >
+            <span>Page ${curPage + 1}</span>
+
+            <svg class="search__icon">
+                <use href="${icons}#icon-arrow-right"></use>
+            </svg>
+            </button>
+        `;
+        // Solo existe una página o no hay resultados
+        return '';
+    }
+}
+exports.default = new PaginationView();
+
+},{"./Views":"agRZU","839df59dd0ab389f":"aob6l","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["5DuvQ","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
 
 //# sourceMappingURL=forkify.4a59a05f.js.map
