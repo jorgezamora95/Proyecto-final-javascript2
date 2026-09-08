@@ -975,7 +975,7 @@
 112C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\chokidar\index.d.ts134332853224212618 0
 115C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\react-refresh\babel.js134332852298879222 0
 158C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\helpers\cjs\_class_check_private_static_field_descriptor.cjs134332852329647855 0
-113C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\fraction.js\examples134333144479898214 1
+113C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\fraction.js\examples134333144479848194 1
 129C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\core\src\loadParcelPlugin.js134332852344830003 0
 128C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\sass\types\value\argument_list.d.ts134332853224815914 0
 122C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\sass\types\value\boolean.d.ts134332853224845867 0
