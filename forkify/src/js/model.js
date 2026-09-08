@@ -1,16 +1,14 @@
+import { API_URL } from './config.js';
+import { getJSON } from './helpers.js'; // importa la función getJSON desde helpers.js
+
 export const state = {
     recipe: {},
 };
 
 export const loadRecipe = async function(id) {
     try {
-        const resp = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
         
-        const data = await resp.json();
-
-        if (!resp.ok) {
-            throw new Error(`${data.message} (${resp.status})`);
-        }
+        const data = await getJSON(`${API_URL}${id}`);
 
         const { recipe } = data.data; // desestructuración -> busca la propiedad recipe dentro de data.data y la asigna a la variable recipe
         
@@ -30,6 +28,6 @@ export const loadRecipe = async function(id) {
         console.log(state.recipe);
 
     } catch (err) {
-        alert(err);
+        console.error(`${err} 💥💥💥`);
     }
 } 

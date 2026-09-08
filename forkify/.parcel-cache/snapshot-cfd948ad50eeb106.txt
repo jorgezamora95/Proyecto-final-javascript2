@@ -10,7 +10,7 @@
 83C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\src134332853412849039 1
 133C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\reporter-cli\src\bundleReport.js134332852300587941 0
 133C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\type-fest\source\fixed-length-array.d.ts134332852324442349 0
-84C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist134333144675798981 1
+84C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist134333604553496697 1
 101C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\get-port134332852308403207 1
 133C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\data\features\array-flat.js134332852335498140 0
 91C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\.prettierrc134314987983270117 0
@@ -70,7 +70,7 @@
 116C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\browserslist\index.d.ts134332852318064530 0
 123C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\commander\package-support.json134332852319395922 0
 116C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\watcher\scripts134332852335898281 1
-106C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\src\js\views\RecipeView.js134333144509788893 0
+106C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\src\js\views\RecipeView.js134333604592929615 0
 118C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\commander\lib\argument.js134332852300450873 0
 119C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\dotenv-expand\package.json134332852306670232 0
 120C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\type-fest\source\basic.d.ts134332852314477000 0
@@ -191,7 +191,7 @@
 104C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\ansi-styles134332852307671793 1
 133C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\chrome-trace-event\dist\trace-event.d.ts134332852310014660 0
 102C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\commander134332852322252035 1
-108C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.4a59a05f.js.map134333144518539328 0
+108C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.4a59a05f.js.map134333604553486625 0
 124C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\data\regions\AT.js134332852337811246 0
 110C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\readdirp\index.js134332853223406961 0
 133C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\codeframe\test\codeframe.test.js134332852328772341 0
@@ -201,7 +201,7 @@
 131C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\core\src\public\BundleGraph.js134332852336285769 0
 125C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\helpers\esm\_export_star.js134332852351689399 0
 114C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\dist\lib134332852388865547 1
-103C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\icons.7bd9dd61.svg134333144518269336 0
+103C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\icons.7bd9dd61.svg134333603355874994 0
 124C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\data\regions\NL.js134332852382650622 0
 134C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\helpers\_\_ts_generator\package.json134332852366996210 0
 105C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\browserslist134332852317810262 1
@@ -1886,7 +1886,7 @@
 137C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\data\features\serviceworkers.js134332852387353511 0
 123C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\core\lib\Validation.js134332852356370668 0
 124C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\data\regions\MG.js134332852381043280 0
-104C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.4a59a05f.js134333144518269336 0
+104C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.4a59a05f.js134333604553351325 0
 124C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\data\regions\MH.js134332852381094502 0
 124C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\data\regions\MK.js134332852381205486 0
 124C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\caniuse-lite\data\regions\ML.js134332852381265825 0
@@ -2777,7 +2777,7 @@
 129C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\helpers\esm\_async_generator.js134332852346343092 0
 133C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\diagnostic\test\markdown.test.js134332852311701942 0
 128C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\helpers\esm\_async_iterator.js134332852346473017 0
-103C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\icons.21bad73c.svg134333144518269336 0
+103C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\icons.21bad73c.svg134333603356020138 0
 132C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\helpers\esm\_async_to_generator.js134332852346630032 0
 135C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\helpers\esm\_await_async_generator.js134332852346739869 0
 125C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\helpers\esm\_await_value.js134332852346837984 0
@@ -2946,7 +2946,7 @@
 128C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\reporter-dev-server\LICENSE134332852296698545 0
 115C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@swc\core\Visitor.d.ts134332852320083092 0
 111C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\diagnostic134332852312812325 1
-105C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.f7626f62.css134333144519591234 0
+105C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.f7626f62.css134333603355754919 0
 114C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\error-overlay134332852333654070 1
 109C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\rust\src134332852306900218 1
 114C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\feature-flags134332852314258707 1
@@ -2957,7 +2957,7 @@
 114C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\optimizer-css134332852307480706 1
 116C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\optimizer-image134332852302479085 1
 114C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\optimizer-swc134332852306840124 1
-95C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\index.html134333144675688980 0
+95C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\index.html134333603356261328 0
 116C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\package-manager134332852336763695 1
 111C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\graph\test134332852324504536 1
 113C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\packager-css134332852307480706 1
@@ -3466,7 +3466,7 @@
 117C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\fs\src\NodeFS.js134332852319719872 0
 120C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\fs\src\OverlayFS.js134332852320971277 0
 122C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\fs\lib\browser.js.map134332852324037190 0
-102C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\logo.726d37a8.png134333144518279258 0
+102C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\logo.726d37a8.png134333603355950125 0
 116C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\fs\lib\index.js134332852313021526 0
 118C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\fs\lib\types.d.ts134332852327089687 0
 118C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\@parcel\feature-flags\lib134332852316264182 1
@@ -3677,6 +3677,6 @@
 124C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\node_modules\.bin\update-browserslist-db.ps1134332852395772915 0
 108C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.34b01572.js.map134333144675738973 0
 109C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.5adc5521.css.map134333144675788977 0
-109C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.f7626f62.css.map134333144519625402 0
+109C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\forkify.f7626f62.css.map134333603355804994 0
 103C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\icons.c5b0f01c.svg134333144675679008 0
 102C:\Users\61334.PENTAFONMEX\Documents\Node.js\Proyecto_final_Javascript2\forkify\dist\logo.0240107d.png134333144675352629 0
