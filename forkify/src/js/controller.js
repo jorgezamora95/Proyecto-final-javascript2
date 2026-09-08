@@ -1,5 +1,7 @@
 import * as model from './model.js';
 import recipeView from './views/RecipeView.js';
+import searchView from './views/SearchViews.js';
+import resultsView from './views/ResultsView.js';
 
 
 // https://forkify-api.herokuapp.com/v2
@@ -9,7 +11,6 @@ import recipeView from './views/RecipeView.js';
 async function controlRecipes() {
   try {
     const id = window.location.hash.slice(1);
-    console.log(id);
     if (!id) return;
 
     recipeView.renderSpinner();
@@ -19,23 +20,31 @@ async function controlRecipes() {
     recipeView.render(model.state.recipe);
 
   }
-  catch (error) {
-    console.error(error);
+  catch (err) {
+    recipeView.renderError();
+    throw err;
   }
 }
 
-// function renderSpinner(parentEl) {
-//   const markup = `
-//       <div class="spinner">
-//         <svg>
-//           <use href="${icons}#icon-loader"></use>
-//         </svg>
-//       </div>
-//     `;
-//   parentEl.innerHTML = '';
-//   parentEl.insertAdjacentHTML('afterbegin', markup);
-// }
+function init() {
+  recipeView.addHandlerRender(controlRecipes);
+  searchView.addHandlerSearch(controlSearchResults);
+}
 
-['hashchange', 'load'].forEach(ev => {
-  window.addEventListener(ev, controlRecipes);
-}); 
+init();
+
+async function controlSearchResults() {
+  try {
+    resultsView.renderSpinner();
+
+    const query = searchView.getQuery();
+    await model.loadSearchResults(query);
+    
+    resultsView.render(model.state.search.results);
+    
+  }
+  catch(err) {
+    console.log(err);
+  }
+}
+
